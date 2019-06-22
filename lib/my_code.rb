@@ -20,3 +20,14 @@ def map_to_no_change(arr)
   end
   new_arr
 end
+
+def map_to_double(arr)
+  #arr.map {|n| 2*n}
+  new_arr = []
+  i = 0
+  while i < arr.length
+    new_arr << 2*arr[i]
+    i +=1
+  end
+  new_arr
+end  
