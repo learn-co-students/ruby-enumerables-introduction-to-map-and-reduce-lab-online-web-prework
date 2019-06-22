@@ -62,3 +62,14 @@ def reduce_to_all_true(arr)
   end
   true
 end
+
+def reduce_to_any_true(arr)
+  #arr.any? {|el| el}
+  #!arr.all? {|el| !el}
+  i = 0
+  while i < arr.length
+    return true if arr[i]
+    i += 1
+  end
+  false
+end
