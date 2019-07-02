@@ -44,11 +44,11 @@ def reduce_to_total(source_array, starting_point = 0)
   total
 end 
 
-def reduce_to_all(source_array)
+def reduce_to_all_true(source_array)
   i = 0 
   reduction = true 
   while i < source_array.length do
-    if source_array[i]
+      if source_array[i]
      reduction = true
     else 
       return reduction = false
