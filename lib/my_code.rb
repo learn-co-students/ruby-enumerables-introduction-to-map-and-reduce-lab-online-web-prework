@@ -1,62 +1,80 @@
 def map_to_negativize(source_array)
-  negativized_array = []
-  i = 0
-  while i < source_array.length do
-    negativized_array.push( source_array[i] * -1 )
-    i += 1
+  neg_array = []
+  counter = 0
+  
+  while counter < source_array.length do
+    neg_array << source_array[counter] * -1
+    counter += 1
   end
-  return negativized_array
+  
+  neg_array
 end
 
 def map_to_no_change(source_array)
-  no_change = source_array
-  return no_change
+  unchanged_array = []
+  counter = 0
+  
+  while counter < source_array.length do
+    unchanged_array << source_array[counter]
+    counter += 1
+  end
+  
+  unchanged_array
 end
 
 def map_to_double(source_array)
   doubled_array = []
-  i = 0
-  while i < source_array.length do
-    doubled_array.push( source_array[i] * 2 )
-    i += 1
+  counter = 0
+  
+  while counter < source_array.length do
+    doubled_array << source_array[counter] * 2
+    counter += 1
   end
-  return doubled_array
+  
+  doubled_array
 end
 
 def map_to_square(source_array)
   squared_array = []
-  i = 0
-  while i < source_array.length do
-    squared_array.push( source_array[i] ** 2 )
-    i += 1
+  counter = 0
+  
+  while counter < source_array.length do
+    squared_array << source_array[counter] ** 2
+    counter += 1
   end
-  return squared_array
+  
+  squared_array
 end
 
-def reduce_to_total(source_array, starting_point = 0)
-  total = starting_point
-  i = 0
-  while i < source_array.length do
-    total += source_array[i]
-    i += 1
+def reduce_to_total(source_array, total = 0)
+  counter = 0
+  
+  while counter < source_array.length do
+    total += source_array[counter]
+    counter += 1
   end
-  return total
+  
+  total
 end
 
 def reduce_to_all_true(source_array)
-  i = 0
-  while i < source_array.length do
-    return false if !source_array[i]
-    i += 1
-  end
-  return true
+  counter = 0
+    while counter < source_array.length do
+      if !source_array[counter]
+        return false
+      end
+      counter += 1 
+    end
+  true
 end
 
 def reduce_to_any_true(source_array)
-  i = 0
-  while i < source_array.length do
-    return true if source_array[i]
-    i += 1
-  end
-  return false
+  counter = 0
+    while counter < source_array.length do
+      if source_array[counter]
+        return true
+      end
+      counter += 1 
+    end
+  false
 end
