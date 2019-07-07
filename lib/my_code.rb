@@ -22,13 +22,12 @@ end
 
 def reduce_to_all_true(source_array)
   i = 0 
-  while i < 3 do
-      #binding.pry
+  while i < source_array.size do
+       i += 1
       if !source_array[i] 
        return false 
-       i = i + 1
+      
          #binding.pry
-     
     end
   end
 end
