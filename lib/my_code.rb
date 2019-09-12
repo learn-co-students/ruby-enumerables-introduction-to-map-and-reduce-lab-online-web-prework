@@ -62,19 +62,21 @@ def reduce_to_total(source_array, total = 0)
 end
 
 def reduce_to_all_true(source_array)
-  if source_array.include? (FALSE)
-    return FALSE
-  else 
-    return TRUE
+  i = 0 
+  while i < source_array.length do
+    return false if !source_array[i]
+    i += 1 
   end
+  return true
 end
 
 def reduce_to_any_true(source_array)
-  if source_array.include? (TRUE)
-    return TRUE
-  else
-    return FALSE
+  i = 0 
+  while i < source_array.length do
+    return true if source_array[i]
+    i += 1 
   end
+  return false
 end
 
 
