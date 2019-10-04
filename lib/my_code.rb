@@ -39,6 +39,7 @@ def map_to_square(array)
   count = 0 
   while count < array.length do 
         squared_array << array[count]  ** 2
+        count +=1 
   end 
     squared_array
 end 
@@ -57,7 +58,7 @@ end
  def reduce_to_all_true(the_array)
       count = 0 
       while count < the_array.length do
-        return false if the_array == 0 
+        return false if the_array[count] == false
         count +=1  
       end 
       return true
@@ -65,9 +66,9 @@ end
 
 def reduce_to_any_true(array)
   count = 0  
-  while count < array do
-    return true if array >= count  
-    count +=-1
+  while count < array.length do
+    return true if array[count]  == true
+    count +=1
   end  
 return false  
 end
