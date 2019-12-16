@@ -35,11 +35,19 @@ def map_to_square(arr)
   new_arr
 end
 
-def reduce_to_total(arr)
-  new_arr = []
+def reduce_to_total(arr, start=0)
+  total = 0
   i = 0
   while i < arr.length do
-    
+    total += arr[i]
     i += 1
   end
+  if start > 0
+    total += start
+  end
+  total
+end
+
+def reduce_to_all_true
+
 end
