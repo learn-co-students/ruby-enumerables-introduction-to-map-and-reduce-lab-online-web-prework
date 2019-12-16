@@ -11,6 +11,35 @@ def map_to_negativize(array)
   # binding.pry
 end
 
-def map_to_no_change
+def map_to_no_change(array)
+  array
+end
 
+def map_to_double(array)
+  new_array = []
+  i = 0
+  while i < array.length do
+    new_array << array[i] * 2
+    i += 1
+  end
+  new_array
+end
+
+def map_to_square(arr)
+  new_arr = []
+  i = 0
+  while i < arr.length do
+    new_arr << arr[i] ** 2
+    i += 1
+  end
+  new_arr
+end
+
+def reduce_to_total(arr)
+  new_arr = []
+  i = 0
+  while i < arr.length do
+    
+    i += 1
+  end
 end
