@@ -48,6 +48,24 @@ def reduce_to_total(arr, start=0)
   total
 end
 
-def reduce_to_all_true
+def reduce_to_all_true(arr)
+  i = 0
+  while i < arr.length do
+    if !arr[i]
+      return nil
+    end
+    i += 1
+  end
+  true
+end
 
+def reduce_to_any_true(arr)
+  i = 0
+  while i < arr.length do
+    if arr[i]
+      return true
+    end
+    i += 1
+  end
+  false
 end
